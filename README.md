@@ -107,9 +107,47 @@ src/main/resources/
 
 O teste automatizado atualmente incluído no projeto é o teste básico de inicialização do contexto Spring; os passos acima documentam a verificação manual dos fluxos principais.
 
-## Capturas para a entrega
+## Capturas da aplicação
 
-**Ainda é preciso adicionar prints atuais**, tirados após a execução da versão final. O enunciado solicita imagens e explicações no README, principalmente do desenvolvimento e da implementação do login. Sugestão de capturas: página inicial, cadastro, login personalizado, catálogo, formulário de produto, detalhes, acesso negado para `CLIENTE` e tabela de produtos no PostgreSQL. Guarde-as em `docs/prints/` e insira aqui os links Markdown correspondentes. O print da configuração final do Spring Initializr e das dependências também deve acompanhar a entrega.
+As imagens abaixo mostram a interface da Parte 1 e o fluxo de gerenciamento de produtos. Foram feitas durante a execução local do projeto.
+
+### Página inicial
+
+A página apresenta o catálogo e os caminhos para criar uma conta ou entrar no sistema.
+
+![Página inicial do Mercado Express](docs/prints/pagina-inicial.png)
+
+### Cadastro de usuário
+
+O formulário permite criar uma conta com perfil `CLIENTE`, informando nome, e-mail e senha.
+
+![Formulário de cadastro de conta](docs/prints/cadastro-conta.png)
+
+### Catálogo e ações do administrador
+
+Após o login com perfil `ADMIN`, a lista mostra a busca, os produtos e as ações de cadastrar, consultar detalhes, editar e excluir.
+
+![Lista de produtos para o administrador](docs/prints/lista-produtos.png)
+
+### Cadastro de produto
+
+A confirmação de cadastro aparece na lista após salvar um novo produto.
+
+![Confirmação de produto cadastrado](docs/prints/produto-cadastrado.png)
+
+### Edição de produto
+
+Depois de editar, a lista exibe os dados atualizados e uma mensagem de sucesso.
+
+![Confirmação de produto atualizado](docs/prints/produto-atualizado.png)
+
+### Exclusão de produto
+
+Depois da exclusão, o produto deixa a lista e a aplicação confirma a operação.
+
+![Confirmação de produto excluído](docs/prints/produto-excluido.png)
+
+Ainda faltam capturas da tela de login, do acesso negado para `CLIENTE` e da configuração do Spring Initializr para completar a documentação visual solicitada na entrega.
 
 ## Publicação
 
