@@ -183,4 +183,21 @@ Depois da exclusão, o produto deixa a lista e a aplicação confirma a operaç�
 
 ## Publicação
 
-O link de produção será acrescentado após o deploy. A configuração local usa `localhost` para o PostgreSQL; para publicar a aplicação, será necessário fornecer as credenciais e o endereço do banco do ambiente de produção por variáveis de ambiente, sem expor senhas no repositório. Depois do deploy, teste novamente o login, os dois perfis e o CRUD no endereço publicado.
+O link público da Parte 1 será acrescentado aqui após o primeiro deploy. O `Dockerfile` compila a aplicação com Java 17 e inicia o arquivo JAR. A aplicação usa a porta indicada por `PORT` na hospedagem e continua usando `8080` quando executada localmente.
+
+### Deploy gratuito no Render
+
+1. Crie uma conta no Render e, no painel, crie um banco **Render Postgres** com o plano **Free**. Anote na página **Info** o host interno, o nome do banco, o usuário e a senha. Guarde a senha apenas nas configurações privadas do Render.
+2. Crie um **Web Service** a partir deste repositório, na branch `main`, com runtime **Docker** e plano **Free**. Escolha a mesma região do banco para permitir a conexão interna.
+3. Em **Environment**, configure as variáveis abaixo, usando os dados do banco criado:
+
+   | Variável | Valor |
+   | --- | --- |
+   | `DB_URL` | `jdbc:postgresql://HOST_INTERNO:5432/NOME_DO_BANCO` |
+   | `DB_USER` | Usuário do PostgreSQL mostrado pelo Render |
+   | `DB_PASSWORD` | Senha do PostgreSQL mostrada pelo Render |
+
+4. Faça o deploy e abra o endereço `https://...onrender.com/` informado pelo Render. Cadastre um usuário novo e teste o login e o catálogo. Para testar o perfil `ADMIN`, atribua esse perfil a uma conta autorizada no banco de dados, conforme descrito acima.
+5. Depois de validar o site, substitua a frase inicial desta seção pelo endereço público. Os dados do PostgreSQL local **não são transferidos automaticamente** para o banco hospedado.
+
+No plano gratuito, o serviço web pode adormecer após ficar sem uso, e o banco Render Postgres gratuito expira depois de 30 dias. Se o projeto precisar ficar disponível por mais tempo, será necessário migrar o banco ou mudar de plano.

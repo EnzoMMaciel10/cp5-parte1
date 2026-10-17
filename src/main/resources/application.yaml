@@ -3,8 +3,8 @@ spring:
     name: cp5
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/cp5
-    username: postgres
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/cp5}
+    username: ${DB_USER:postgres}
     password: ${DB_PASSWORD}
 
   jpa:
@@ -16,4 +16,5 @@ spring:
     cache: false
 
 server:
-  port: 8080
+  port: ${PORT:8080}
+  forward-headers-strategy: framework

@@ -1,0 +1,10 @@
+.git
+.idea
+.vscode
+target
+docs
+README.md
+*.iml
+.env
+.env.*
+src/main/resources/static/images/frutas-fundo.png
