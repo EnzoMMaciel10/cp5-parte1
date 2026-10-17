@@ -123,21 +123,35 @@ O formulário permite criar uma conta com perfil `CLIENTE`, informando nome, e-m
 
 ![Formulário de cadastro de conta](docs/prints/cadastro-conta.png)
 
+### Login
+
+A tela própria de autenticação recebe o e-mail e a senha cadastrados, com um link para criar uma conta.
+
+![Tela de login do Mercado Express](docs/prints/login.png)
+
 ### Catálogo e ações do administrador
 
 Após o login com perfil `ADMIN`, a lista mostra a busca, os produtos e as ações de cadastrar, consultar detalhes, editar e excluir.
 
 ![Lista de produtos para o administrador](docs/prints/lista-produtos.png)
 
+Esta visão mais próxima mostra a pesquisa por nome, os dados em estoque e as ações disponíveis para cada produto.
+
+![Catálogo de produtos com busca e ações](docs/prints/catalogo-produtos.png)
+
 ### Cadastro de produto
 
-A confirmação de cadastro aparece na lista após salvar um novo produto.
+O formulário reúne os dados, o preço, o custo e a quantidade em estoque. A confirmação de cadastro aparece na lista após salvar um novo produto.
+
+![Formulário de novo produto](docs/prints/formulario-novo-produto.png)
 
 ![Confirmação de produto cadastrado](docs/prints/produto-cadastrado.png)
 
 ### Edição de produto
 
-Depois de editar, a lista exibe os dados atualizados e uma mensagem de sucesso.
+O administrador pode alterar os dados de um produto existente. Depois de salvar, a lista exibe os dados atualizados e uma mensagem de sucesso.
+
+![Formulário de edição de produto](docs/prints/formulario-editar-produto.png)
 
 ![Confirmação de produto atualizado](docs/prints/produto-atualizado.png)
 
@@ -147,7 +161,7 @@ Depois da exclusão, o produto deixa a lista e a aplicação confirma a operaç�
 
 ![Confirmação de produto excluído](docs/prints/produto-excluido.png)
 
-Ainda faltam capturas da tela de login, do acesso negado para `CLIENTE` e da configuração do Spring Initializr para completar a documentação visual solicitada na entrega.
+Ainda faltam capturas do acesso negado para `CLIENTE` e da configuração do Spring Initializr para completar a documentação visual solicitada na entrega.
 
 ## Publicação
 
