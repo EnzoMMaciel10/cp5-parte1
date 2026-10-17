@@ -183,7 +183,7 @@ Depois da exclusão, o produto deixa a lista e a aplicação confirma a operaç�
 
 ## Publicação
 
-O link público da Parte 1 será acrescentado aqui após o primeiro deploy. O `Dockerfile` compila a aplicação com Java 17 e inicia o arquivo JAR. A aplicação usa a porta indicada por `PORT` na hospedagem e continua usando `8080` quando executada localmente.
+**Aplicação publicada:** [https://cp5-parte1.onrender.com/](https://cp5-parte1.onrender.com/). O `Dockerfile` compila a aplicação com Java 17 e inicia o arquivo JAR. A aplicação usa a porta indicada por `PORT` na hospedagem e continua usando `8080` quando executada localmente.
 
 ### Deploy gratuito no Render
 
@@ -198,6 +198,6 @@ O link público da Parte 1 será acrescentado aqui após o primeiro deploy. O `D
    | `DB_PASSWORD` | Senha do PostgreSQL mostrada pelo Render |
 
 4. Faça o deploy e abra o endereço `https://...onrender.com/` informado pelo Render. Cadastre um usuário novo e teste o login e o catálogo. Para testar o perfil `ADMIN`, atribua esse perfil a uma conta autorizada no banco de dados, conforme descrito acima.
-5. Depois de validar o site, substitua a frase inicial desta seção pelo endereço público. Os dados do PostgreSQL local **não são transferidos automaticamente** para o banco hospedado.
+5. Os dados do PostgreSQL local **não são transferidos automaticamente** para o banco hospedado.
 
 No plano gratuito, o serviço web pode adormecer após ficar sem uso, e o banco Render Postgres gratuito expira depois de 30 dias. Se o projeto precisar ficar disponível por mais tempo, será necessário migrar o banco ou mudar de plano.
