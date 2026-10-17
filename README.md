@@ -111,6 +111,12 @@ O teste automatizado atualmente incluído no projeto é o teste básico de inici
 
 As imagens abaixo mostram a interface da Parte 1 e o fluxo de gerenciamento de produtos. Foram feitas durante a execução local do projeto.
 
+### Configuração inicial do projeto
+
+A captura do Spring Initializr registra a criação do projeto com Maven, Java 17, Spring Boot 4.0.8 e as dependências iniciais de web, templates, persistência, segurança, PostgreSQL e Lombok. As dependências efetivas do projeto estão no `pom.xml`.
+
+![Configuração do projeto no Spring Initializr](docs/prints/spring-initializr.png)
+
 ### Página inicial
 
 A página apresenta o catálogo e os caminhos para criar uma conta ou entrar no sistema.
@@ -139,6 +145,20 @@ Esta visão mais próxima mostra a pesquisa por nome, os dados em estoque e as a
 
 ![Catálogo de produtos com busca e ações](docs/prints/catalogo-produtos.png)
 
+### Visão do cliente e controle de acesso
+
+O perfil `CLIENTE` consegue consultar o catálogo e abrir os detalhes, mas não vê os controles de cadastro, edição ou exclusão.
+
+![Lista de produtos para o perfil cliente](docs/prints/catalogo-cliente.png)
+
+A página de detalhes apresenta os dados do produto e sua disponibilidade em estoque.
+
+![Detalhes de um produto](docs/prints/detalhes-produto.png)
+
+Ao tentar abrir diretamente `/mercado/novo`, o cliente recebe a página personalizada de acesso negado. O bloqueio é aplicado no servidor, além da ocultação dos controles na interface.
+
+![Acesso negado ao perfil cliente](docs/prints/acesso-negado-cliente.png)
+
 ### Cadastro de produto
 
 O formulário reúne os dados, o preço, o custo e a quantidade em estoque. A confirmação de cadastro aparece na lista após salvar um novo produto.
@@ -160,8 +180,6 @@ O administrador pode alterar os dados de um produto existente. Depois de salvar,
 Depois da exclusão, o produto deixa a lista e a aplicação confirma a operação.
 
 ![Confirmação de produto excluído](docs/prints/produto-excluido.png)
-
-Ainda faltam capturas do acesso negado para `CLIENTE` e da configuração do Spring Initializr para completar a documentação visual solicitada na entrega.
 
 ## Publicação
 
