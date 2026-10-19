@@ -2,6 +2,10 @@
 
 Aplicação web para gerenciamento de produtos de um mercado, desenvolvida para o **Checkpoint 5 de Java Advanced da FIAP**. Esta parte reúne o catálogo, o CRUD de produtos, o cadastro de usuários e o controle de acesso com Spring Security. A parte de pedidos pertence a um projeto e repositório separados (**Parte 2**).
 
+- **Aplicação publicada (Render):** [cp5-parte1.onrender.com](https://cp5-parte1.onrender.com/)
+- **Vídeo de demonstração das Partes 1 e 2:** [assistir no YouTube](https://youtu.be/vg6UIs_rz0o)
+- **Repositório da Parte 2:** [cp5-parte2](https://github.com/EnzoMMaciel10/cp5-parte2)
+
 ## Integrantes
 
 - Enzo Monteiro Maciel - RM563734
